@@ -1,5 +1,5 @@
 
-- Insall Nest CLI
+- Install Nest CLI
     - sudo npm install -g @nestjs/cli
 
 - Create a new project
@@ -66,4 +66,4 @@
     To create a new SQLite database, change the default name of the database if needed identifier.sqlite and click OK.
     Also, to create a database, you can drag an SQLite DB file to the Database tool window.
   * To ensure that the connection to the data source is successful, click the Test Connection link.
-
+  * A console will be opened when you double click your file, there you can write sql and excute.
