@@ -11,7 +11,13 @@
 
 - Execute Project
     - npm run start:dev
-
+    - Send messages by PostMan
+        (
+            Or You can add ReST Console plugin in WebStorm.
+            Create a file in users dir called request.http (File/New/HTTP Request)
+            You can check the examples (when opened the file in Webstorm you will see a link "Examples")
+            Execute from here and see the results in "Services window")
+        )
 - Creating module with CLI
     - In the root directory in the terminal
         - //nest generate module messages
