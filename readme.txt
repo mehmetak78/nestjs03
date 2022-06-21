@@ -29,7 +29,10 @@
         - nest g service users
         - nest g service reports
 
-
+- TypeORM, SQLLite
+    - npm install @nestjs/typeorm typeorm sqlite3
+    - If you use an ORM Repository files are auto generated. YOu will not create it manually.
+    -
 
 
 
