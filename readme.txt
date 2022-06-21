@@ -40,7 +40,7 @@
     - If you use an ORM Repository files are auto generated. YOu will not create it manually.
     - Install Webstorm Plugin DatabaseTools And SQL for Webstorm
             - https://www.jetbrains.com/help/webstorm/sqlite.html
-            - or have notes in my Mac's Notes application (TypeOrm, SQLite)
+            - or check the notes below
     1- Create an Entity File
     2- Connect entity file to its parent module. (This creates the repository)
     3- Connect the entity to root connection. (in app module)
