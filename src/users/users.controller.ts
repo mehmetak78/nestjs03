@@ -1,5 +1,6 @@
 import {
   Body,
+  ClassSerializerInterceptor,
   Controller,
   Delete,
   Get,
@@ -8,12 +9,17 @@ import {
   Patch,
   Post,
   Query,
+  UseInterceptors,
 } from '@nestjs/common';
 import CreateUserDto from './dtos/create-user.dto';
 import { UsersService } from './users.service';
 import UpdateUserDto from './dtos/update-user.dto';
 
+import UserDto from './dtos/user.dto';
+import UseSerializeInterceptor from '../interceptors/serialize.interceptor';
+
 @Controller('auth')
+@UseSerializeInterceptor(UserDto)
 export class UsersController {
   constructor(private usersService: UsersService) {}
 
@@ -24,12 +30,14 @@ export class UsersController {
   }
 
   // GET http://localhost:3000/auth/1
+  // @UseSerializeInterceptor(UserDto) (Can be applied in method level)
   @Get('/:id')
   async findUser(@Param('id') id: string) {
     const user = await this.usersService.findOneBy(parseInt(id));
     if (!user) {
       throw new NotFoundException('user not found');
     }
+    return user;
   }
 
   // GET http://localhost:3000/auth?email=mehmet@mehmet.com
