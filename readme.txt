@@ -70,17 +70,3 @@
   * A console will be opened when you double click your file, there you can write sql and excute.
 
 
-user.entity
-  @Column()
-  @Exclude()
-  password: string;
-users.controller    @UseInterceptors(ClassSerializerInterceptor)
-  @UseInterceptors(ClassSerializerInterceptor)
-  @Get('/:id')
-
-dir: interceptors
-    serialize.interceptor
-    user.dto    (for response) (can exclude some fields from response)
-    users.controller
-        @UseSerializeInterceptor(UserDto)
-        @Get('/:id')
