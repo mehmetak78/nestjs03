@@ -26,9 +26,19 @@ POST http://localhost:3000/auth/signup
 Content-Type: application/json
 
 {
-    "email": "mehmet@mehmet.com",
+    "email": "mehmet@unique2.com",
     "password": "mehmet2"
 }
+###
+
+POST http://localhost:3000/auth/signin
+Content-Type: application/json
+
+{
+"email": "mehmet@unique2.com",
+"password": "mehmet2"
+}
+
 
 
 

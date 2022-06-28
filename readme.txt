@@ -70,3 +70,6 @@
   * A console will be opened when you double click your file, there you can write sql and excute.
 
 
+- auth.service.ts
+
+
