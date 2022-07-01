@@ -8,6 +8,8 @@
     - Or: - Install NestJS plugin for Webstorm
 
 - npm install class-validator class-transformer
+- npm install cookie-session @types/cookie-session
+
 
 - Execute Project
     - npm run start:dev
@@ -70,6 +72,9 @@
   * A console will be opened when you double click your file, there you can write sql and excute.
 
 
-- auth.service.ts
+- npm install cookie-session @types/cookie-session
+- main.ts
+- users.controller.ts
+
 
 

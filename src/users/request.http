@@ -26,8 +26,8 @@ POST http://localhost:3000/auth/signup
 Content-Type: application/json
 
 {
-    "email": "mehmet@unique2.com",
-    "password": "mehmet2"
+    "email": "test@test.com",
+    "password": "test"
 }
 ###
 
@@ -35,9 +35,17 @@ POST http://localhost:3000/auth/signin
 Content-Type: application/json
 
 {
-"email": "mehmet@unique2.com",
-"password": "mehmet2"
+"email": "test@test.com",
+"password": "test"
 }
+
+###
+GET http://localhost:3000/auth/getCurrentUser
+Accept: application/json
+
+###
+POST http://localhost:3000/auth/signout
+Content-Type: application/json
 
 
 
