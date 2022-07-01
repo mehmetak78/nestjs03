@@ -1,6 +1,5 @@
 import {
   Body,
-  ClassSerializerInterceptor,
   Controller,
   Delete,
   Get,
@@ -10,6 +9,7 @@ import {
   Post,
   Query,
   Session,
+  UseGuards,
 } from '@nestjs/common';
 import CreateUserDto from './dtos/create-user.dto';
 import { UsersService } from './users.service';
@@ -18,6 +18,9 @@ import UpdateUserDto from './dtos/update-user.dto';
 import UserDto from './dtos/user.dto';
 import UseSerializeInterceptor from '../interceptors/serialize.interceptor';
 import AuthService from './auth.service';
+import { CurrentUser } from './decorators/current-user.decorator';
+import User from './user.entity';
+import AuthGuard from '../guards/auth.guard';
 
 @Controller('auth')
 @UseSerializeInterceptor(UserDto)
@@ -29,8 +32,9 @@ export class UsersController {
 
   // GET http://localhost:3000/auth/getCurrentUser
   @Get('/getCurrentUser')
-  getCurrentUser(@Session() session: any) {
-    return this.usersService.findOneBy(session.userId);
+  @UseGuards(AuthGuard)
+  getCurrentUser(@CurrentUser() user: User) {
+    return user;
   }
 
   @Post('/signout')
