@@ -20,6 +20,13 @@
             You can check the examples (when opened the file in Webstorm you will see a link "Examples")
             Execute from here and see the results in "Services window")
         )
+- Unit Testing
+    - npm run test:watch
+        p
+        auth.service.spec.ts
+    - in package.json
+            "test:watch": "jest --watch --maxWorkers=1",
+
 - Creating module with CLI
     - In the root directory in the terminal
         - //nest generate module messages
@@ -72,12 +79,9 @@
   * A console will be opened when you double click your file, there you can write sql and excute.
 
 
-- npm install cookie-session @types/cookie-session
-- main.ts
-- users.controller.ts
-- current-user.decorator.ts
-- current-user.interceptor.ts
-- users.module.ts
-- auth.guard.ts
+- auth.service.spec.ts
+npm run test:watch
+"test:watch": "jest --watch --maxWorkers=1",
+
 
 
