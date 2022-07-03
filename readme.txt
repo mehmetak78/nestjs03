@@ -9,6 +9,10 @@
 
 - npm install class-validator class-transformer
 - npm install cookie-session @types/cookie-session
+- npm install @nestjs/config
+- npm install cross-env
+
+
 
 
 - Execute Project
@@ -79,11 +83,28 @@
   * A console will be opened when you double click your file, there you can write sql and excute.
 
 
-- app.e2e-spec.ts
-- npm run test:e2e
-- auth.e2e-spec.ts
-- app.module.ts
-- main.ts
 
 
+npm install @nestjs/config
+npm install cross-env
 
+.env.development
+.env.test
+
+app.module.ts
+
+    "start": "cross-env NODE_ENV=development nest start",
+    "start:dev": "cross-env NODE_ENV=development  nest start --watch",
+    "start:debug": "cross-env NODE_ENV=development  --debug --watch",
+    "test": "cross-env NODE_ENV=test jest",
+    "test:watch": "cross-env NODE_ENV=test jest --watch --maxWorkers=1",
+    "test:cov": "cross-env NODE_ENV=test jest --coverage",
+    "test:debug": "cross-env NODE_ENV=test node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
+    "test:e2e": "cross-env NODE_ENV=test jest --config ./test/jest-e2e.json --maxWorkers=1"
+
+add to .gitignore
+    .env.development
+    .env.test
+
+jest-e2e.json
+setup.ts
