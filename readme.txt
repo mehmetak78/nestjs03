@@ -79,9 +79,11 @@
   * A console will be opened when you double click your file, there you can write sql and excute.
 
 
-- auth.service.spec.ts
-npm run test:watch
-"test:watch": "jest --watch --maxWorkers=1",
+- app.e2e-spec.ts
+- npm run test:e2e
+- auth.e2e-spec.ts
+- app.module.ts
+- main.ts
 
 
 
